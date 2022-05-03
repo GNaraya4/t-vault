@@ -819,16 +819,6 @@ const SafeDashboard = () => {
                     <NoSafeWrap>
                       <NoData
                         imageSrc={NoSafesIcon}
-                        description="Create a safe to get started!"
-                        actionButton={
-                          <FloatingActionButtonComponent
-                            href="/safes/create-safe"
-                            color="secondary"
-                            icon="addd"
-                            tooltipTitle="Create New Safe"
-                            tooltipPos="bottom"
-                          />
-                        }
                         customStyle={noDataStyle}
                       />
                     </NoSafeWrap>
@@ -836,17 +826,7 @@ const SafeDashboard = () => {
                 )}
               </>
             )}
-            {safeList?.length > 0 && (
-              <FloatBtnWrapper>
-                <FloatingActionButtonComponent
-                  href="/safes/create-safe"
-                  color="secondary"
-                  icon="addd"
-                  tooltipTitle="Create New Safe"
-                  tooltipPos="left"
-                />
-              </FloatBtnWrapper>
-            )}
+            {false && safeList?.length > 0 && <FloatingActionButtonComponent />}
           </LeftColumnSection>
 
           <RightColumnSection clicked={safeClicked}>
